@@ -36,7 +36,7 @@ def loginpage(request):
 def firstpage(request):
     id1=request.session['userid']
     db=userregisterpage.objects.get(id=id1)
-    return render(request,"first.html",{'db':db})
+    return render(request,"index.html",{'db':db})
 
 def carregister(request):
     if(request.method=='POST'):
